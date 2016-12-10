@@ -1,0 +1,13 @@
+<h2> Add User </h2>
+<%=	 form_for @user do |f| %>
+	<%= f.label :email %>
+	<%= f.text_field :email %><br/>
+
+	<%= f.label :password %>
+	<%= f.text_field :password %> <br/>
+
+	<h3>Select Role</h3>
+	<%= f.collection_check_boxes :role_ids, Role.all, :id, :name %>
+
+	<%= f.submit%>
+<% end %>
