@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 	rescue_from CanCan::AccessDenied do
-		redirect_to root_path, notice: "You are not authorized"		
+		redirect_to root_path, notice: "You are not authorized...."		
 	end
 end
+#git
